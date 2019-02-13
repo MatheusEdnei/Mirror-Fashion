@@ -193,6 +193,10 @@
 	float: right;
 }
 
+.form-control:invalid {
+	border: 1px solid #CC0000;
+}
+
 /* Estilos do rodapé */
 footer {
 	padding: 20px 0;
