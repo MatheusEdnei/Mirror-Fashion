@@ -169,6 +169,13 @@ td:first-child {
 	font-style: italic;
 }
 
+.tamanhos output {
+	display: inline-block;
+	height: 50px;
+	width: 44px;
+	line-height: 55px;
+	text-align: center;
+}
 
 @media (min-width: 500px) {
 	.detalhes {
