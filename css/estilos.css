@@ -1,3 +1,72 @@
+
+/*Estilo dos botões*/
+.painel button {
+	/* posicionamento */
+	float: right;
+	margin-right: 10px;
+	padding: 10px;
+
+	/* estilo */
+	background-color: #333;
+	border: 0;
+	border-radius: 4px;
+	box-shadow: 1px 1px 3px rgba(30, 30, 30, 0.5);
+	color: white;
+	font-size: 1em;
+	text-decoration: none;
+	text-shadow: 1px 0 1px black;
+
+	/*animação*/
+	transition: 0.3s;
+}
+
+.painel button:hover {
+	background-color: #393939;
+	box-shadow: 1px 0 20px rgba(200, 200, 120, 0.9);
+}
+
+.painel button {
+	/* posicionamento */
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.painel button::after {
+	/* elemento vazio */
+	content: '';
+	display: block;
+	height: 0;
+	width: 0;
+
+	/* triângulo */
+	border-top: 10px solid #333;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+
+	/* posicionamento */
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+
+	/* animação */
+	transition: 0.3s;
+}
+
+.painel button:hover::after {
+	border-top-color: #393939;
+}
+
+/*Para não mostrar o painel com mais de seis produtos*/
+.painel li:nth-child(n+7) {
+	display:none;
+}
+
+/*Para mostrar o painel com mais de seis produtos*/
+.painel-aberto li:nth-child(n+7) {
+	display: inline-block;
+}
+
 .sacola {
 	background-image: url(../img/sacola.png);
 	background-repeat: no-repeat;
@@ -79,6 +148,7 @@
 	content: '\2756';
 	padding-right: 5px;
 	opacity: 0.4;
+	
 }
 
 .busca h2, .busca form, .menu-departamentos h2 {
@@ -185,6 +255,7 @@
 	font-weight: bold;
 	text-transform: uppercase;
 	margin-bottom: 10px;
+	font-family: 'Bad Script', sans-serif;
 }
 
 .painel a {
@@ -265,7 +336,8 @@ footer .container {
 /* Estilos do corpo */
 body {
 	color:#333333;
-	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	/*font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;*/
+	font-family: 'PT Sans', sans-serif;
 }
 
 header {
